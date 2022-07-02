@@ -1,5 +1,5 @@
 function computerPlay() {
-    arr = ['Rock', 'Paper', 'Scissors'];
+    arr = ['rock', 'paper', 'scissors'];
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
@@ -40,6 +40,8 @@ function game() {
     let res;
     const computerSelection = computerPlay();
     res = playRound(playerSelection.toLowerCase(), computerSelection.toLowerCase());
+    computerChoice.src = `./img/${computerSelection}.jpeg`;
+    computerChoice.style.visibility = 'visible';
     result.classList.add('result');
     result.innerText = `${res[0]} \n\n You: ${res[1]} Computer: ${res[2]}`;
 }
@@ -50,6 +52,7 @@ let computerScore = 0;
 
 let buttons = document.querySelectorAll('button');
 let result = document.getElementById('result');
+let computerChoice = document.getElementById('computer');
 
 window.addEventListener('load', () => {
     playerSelection = '';
