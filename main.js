@@ -40,7 +40,8 @@ function game() {
     let res;
     const computerSelection = computerPlay();
     res = playRound(playerSelection.toLowerCase(), computerSelection.toLowerCase());
-    result.innerText = `${res[0]} your score is ${res[1]}, computer score is ${res[2]}`;
+    result.classList.add('result');
+    result.innerText = `${res[0]} \n\n You: ${res[1]} Computer: ${res[2]}`;
 }
 
 let playerSelection = '';
@@ -59,9 +60,20 @@ window.addEventListener('load', () => {
         button.addEventListener('click', () => {
             playerSelection = button.id;
             game();
+
+            if (playerScore === 5) {
+                result.innerText = `Congrats! you won the game`;
+                playerScore = 0;
+                computerScore = 0;
+            }
+            else if (computerScore === 5) {
+                result.innerText = `Sorry, you can try again next time`;
+                playerScore = 0;    
+                computerScore = 0;
+            }
         });
-        
     });
+    
 })
 
 
