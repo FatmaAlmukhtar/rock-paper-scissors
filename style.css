@@ -103,6 +103,15 @@ button:hover {
     margin: 0 10px;
 }
 
+.finalResult {
+    border: solid 2px #ad5f17;
+    border-radius: 5px;
+    padding: 100px 20px;
+    font-style: italic;
+    transition: 0.1s;
+    margin: auto 10px;
+}
+
 h1 {
     grid-column: 2;
     grid-row: 3;

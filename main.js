@@ -53,6 +53,7 @@ let computerScore = 0;
 let buttons = document.querySelectorAll('button');
 let result = document.getElementById('result');
 let computerChoice = document.getElementById('computer');
+let weapon = document.getElementById('weapon');
 
 window.addEventListener('load', () => {
     playerSelection = '';
@@ -65,11 +66,15 @@ window.addEventListener('load', () => {
             game();
 
             if (playerScore === 5) {
+                weapon.remove();
+                result.classList.add('finalResult');
                 result.innerText = `Congrats! you won the game`;
                 playerScore = 0;
                 computerScore = 0;
             }
             else if (computerScore === 5) {
+                weapon.remove();
+                result.classList.add('finalResult');
                 result.innerText = `Sorry, you can try again next time`;
                 playerScore = 0;    
                 computerScore = 0;
@@ -78,8 +83,3 @@ window.addEventListener('load', () => {
     });
     
 })
-
-
-
-
-//alert(playRound(playerSelection, computerSelection));
