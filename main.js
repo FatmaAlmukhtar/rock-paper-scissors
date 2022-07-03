@@ -43,7 +43,7 @@ function game() {
     computerChoice.src = `./img/${computerSelection}.jpeg`;
     computerChoice.style.visibility = 'visible';
     result.classList.add('result');
-    result.innerText = `${res[0]} \n\n You: ${res[1]} Computer: ${res[2]}`;
+    result.innerText = `${res[0]} \n\n You: ${res[1]} \xa0\xa0\xa0 Computer: ${res[2]}`;
 }
 
 let playerSelection = '';
