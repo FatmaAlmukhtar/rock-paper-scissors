@@ -13,19 +13,34 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <nav>
+            <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors" target="_blank" id="logo">ROCK PAPER SCISSORS</a>
+            <a href="./index.html" class="links">RESET</a>
+            <a href="#" class="links" id="rules" onclick="return false;">RULES</a>
+            <div id="rules-list"">
+                <ol>
+                    <li>To play choose a weapon out of the 3 choices</li>
+                    <li>The first one to reach 5 points wins the game.</li>
+                    <li>Rock destroys scissors.</li>
+                    <li>Scissors cut paper.</li>
+                    <li>Paper wrap over rock.</li>
+                </ol>
+                
+            </div>
+        </nav>
+
         <div id="intro">
             <h2>Welcome to the game!</h2>
-            <p>Choose your weapon</p>
+            
         </div>
         <div id="weapon">
+            <p>Choose your weapon</p>
+            <p class="text">Computer</p>
             <button type="button" id="rock" class="player"><img src="./img/rock.jpeg" alt=""></button>
             <button type="button" id="paper" class="player"><img src="./img/paper.jpeg" alt=""></button>
             <button type="button" id="scissors" class="player"><img src="./img/scissors.jpeg" alt=""></button>
             <h1>VS</h1>
-            <img src="" alt="" id="computer">
+            <img src="./img/computer.png" alt="" id="computer">
         </div>
 
         <div id="result">
